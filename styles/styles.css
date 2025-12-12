@@ -1,0 +1,17 @@
+/* GLOBAL PAGE BACKGROUND */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #001848, #065664, #005f5b) fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+}
+
+.bodyFont {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}

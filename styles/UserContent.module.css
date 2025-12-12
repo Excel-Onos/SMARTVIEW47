@@ -1,0 +1,121 @@
+/* Page wrapper */
+.container {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(135deg, #4169e1, #50c878, #0b2f6a, #0f8a5f);
+  background-size: 400% 400%;
+  animation: floatbg 14s ease infinite;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Soft floating background animation */
+@keyframes floatbg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+.header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+
+/* Gentle note */
+.note {
+  color: #d1fae5;
+  margin-bottom: 15px;
+}
+
+/* File card */
+.file {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 900px;
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Button */
+.button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #50e0b5, #4177ff);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+  transition: 0.25s ease;
+  box-shadow: 0 0 10px rgba(80, 224, 181, 0.4);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(80, 224, 181, 0.9), 0 0 18px rgba(65, 119, 255, 0.9);
+}
+
+/* Smaller button */
+.small {
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+/* File action container */
+.file-actions {
+  display: flex;
+  gap: 10px;
+}
+/* Base button style (already exists) */
+.button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s;
+}
+
+.button:hover {
+  background-color: #005ad1;
+}
+
+/* Download button spacing and style */
+.downloadButton {
+  margin-left: 12px; /* space between Preview and Download */
+  background-color: #28a745; /* optional green for download */
+}
+
+.downloadButton:hover {
+  background-color: #1e7e34;
+}
+/* No files message */

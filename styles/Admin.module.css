@@ -1,0 +1,177 @@
+.container {
+  min-height: 100vh;
+  padding: 30px;
+  color: white;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #0d9488);
+  background-size: 300% 300%;
+  animation: flow 12s ease infinite;
+}
+
+@keyframes flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.sectionTitle {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.form {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 35px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgb(0, 0, 0);
+}
+
+.button {
+  padding: 10px 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.button:hover {
+  background: #60a5fa;
+  box-shadow: 0 0 12px #3b82f6;
+  transform: scale(1.05);
+}
+
+.buttonSmall {
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: 0.25s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.buttonSmall:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px cyan;
+}
+
+.downloadButton {
+  padding: 8px 14px;
+  background: #10b981;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: 0.25s;
+}
+
+.downloadButton:hover {
+  background: #34d399;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px lime;
+}
+
+.deleteButton {
+  padding: 8px 14px;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  transition: 0.25s;
+}
+
+.deleteButton:hover {
+  background: #f87171;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px red;
+}
+
+.fileCard {
+  background: rgba(0,0,0,0.2);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(8px);
+}
+
+.note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.actionRow {
+  margin-top: 10px;
+}
+
+.description {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.error {
+  margin-top: 15px;
+  color: #ff4c4c;
+  font-weight: 600;
+  text-shadow: 0 0 5px #ff0000;
+}
+/* Styled select dropdown */
+.select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* remove default arrow styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Add a subtle focus effect */
+.select:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+}
+
+/* Optional: add a small down arrow using background */
+.select {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+  padding-right: 36px; /* space for arrow */
+}
+/* Responsive adjustments */
