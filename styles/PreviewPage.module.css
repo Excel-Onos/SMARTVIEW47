@@ -1,1 +1,153 @@
+/* Button group spacing */
+.buttonGroup {
+  display: flex;
+  gap: 12px; /* space between buttons */
+}
+
+/* Rest of your previous styles remain unchanged */
+
+.container {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #0070f3;
+  color: white;
+  transition: 0.25s;
+}
+
+.buttonSmall {
+  font-size: 0.85rem;
+}
+
+.button:hover {
+  background: #005ad1;
+}
+
+.preview {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.pdf {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+}
+
+.zipList {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.zipListItem {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin-top: 10px;
+  font-style: italic;
+  color: #000000;
+}
+
+.skeletonHeader {
+  height: 40px;
+  width: 70%;
+  background: #eee;
+  border-radius: 8px;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.skeletonPreview {
+  margin-top: 20px;
+  height: 400px;
+  background: #eee;
+  border-radius: 12px;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { background-color: #f0f0f0; }
+  50% { background-color: #e4e4e4; }
+  100% { background-color: #f0f0f0; }
+}
+
+.message {
+  text-align: center;
+  margin-top: 30px;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .pdf {
+    height: 420px;
+  }
+}
+
+.previewVideo {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.previewAudio {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.preview {
+  width: 100%;
+  height: 80vh;        /* make it fill most of the viewport height */
+  object-fit: cover;   /* makes image cover the container */
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.pdf {
+  width: 100%;
+  height: 80vh;       /* make it fill most of the viewport height */
+  border: none;
+  border-radius: 10px;
+}
+
+
 
