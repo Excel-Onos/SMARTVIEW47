@@ -4,8 +4,7 @@
   gap: 12px; /* space between buttons */
 }
 
-/* Rest of your previous styles remain unchanged */
-
+/* Container */
 .container {
   max-width: 920px;
   margin: 40px auto;
@@ -13,11 +12,21 @@
   font-family: "Inter", sans-serif;
 }
 
+.fullContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  justify-content: flex-start; /* top-align content */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .header h1 {
@@ -52,22 +61,48 @@
   background: #005ad1;
 }
 
-.preview {
+/* Preview content */
+.previewArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center media horizontally */
+  width: 100%;
+  max-width: 600px; /* optional: limit width */
+}
+
+.preview,
+.previewVideo,
+.pdf,
+.previewAudio {
   width: 100%;
   border-radius: 10px;
   margin-top: 12px;
 }
 
+.preview {
+  height: 80vh;        /* fill most of the viewport height */
+  object-fit: cover;
+}
+
+.previewVideo {
+  height: 80vh;
+  object-fit: cover;
+}
+
 .pdf {
-  width: 100%;
-  height: 700px;
+  height: 80vh;       /* fill most of the viewport height */
   border: none;
-  border-radius: 10px;
+}
+
+.previewAudio {
+  margin-top: 12px;
 }
 
 .zipList {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 0;
+  text-align: center; /* center ZIP list */
+  list-style: none;
 }
 
 .zipListItem {
@@ -79,6 +114,7 @@
   margin-top: 10px;
   font-style: italic;
   color: #000000;
+  text-align: center; /* center notes */
 }
 
 .skeletonHeader {
@@ -109,6 +145,7 @@
   color: #000000;
 }
 
+/* Responsive styles */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -119,29 +156,15 @@
   .pdf {
     height: 420px;
   }
-}
 
-.previewVideo {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-top: 12px;
-}
-.previewAudio {
-  width: 100%;
-  margin-top: 12px;
-}
-.preview {
-  width: 100%;
-  height: 80vh;        /* make it fill most of the viewport height */
-  object-fit: cover;   /* makes image cover the container */
-  border-radius: 10px;
-  margin-top: 12px;
-}
-.pdf {
-  width: 100%;
-  height: 80vh;       /* make it fill most of the viewport height */
-  border: none;
-  border-radius: 10px;
+  .preview,
+  .previewVideo,
+  .pdf {
+    max-width: 100%; /* fit mobile screens */
+    height: auto;    /* scale down proportionally */
+  }
+
+  .fullContainer {
+    padding: 10px;
+  }
 }
